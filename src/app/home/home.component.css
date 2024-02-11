@@ -21,7 +21,6 @@
     border-top: 2px solid #888;
     border-bottom: 2px solid #888;
     padding: 10px 150px 10px 150px;
-    color: #ffffff;
   }
   
   .promoted img {
@@ -34,21 +33,18 @@
     flex-direction: column;
     justify-content: space-around;
     margin: 40px 0 40px 0;
-    color: #ffffff;
 
   }
   
   .promo-main-text {
     font-size: 24px;
     text-align: center;
-    color: #ffffff;
 
   }
   
   .promo-sub-text {
     font-size: 20px;
     text-align: center;
-    color: #ffffff;
 
   }
   
@@ -65,7 +61,6 @@
     font-size: 18px;
     text-align: center;
     cursor: pointer;
-    color: #ffffff;
 
   }
   
@@ -93,14 +88,12 @@
     background-color: #333;
     text-align: center;
     justify-content: space-between;
-    color: #ffffff;
 
   }
   
   .white-paper .header-text {
     margin-top: 50px;
     font-size: 30px;
-    color: #ffffff;
   }
   
   .white-paper .sub-text {
@@ -120,7 +113,6 @@
     margin-top: -50px;
     padding: 20px 0;
     font-size: 35px;
-    color: #fff;
   }
   
   .white-paper .learn-more {
