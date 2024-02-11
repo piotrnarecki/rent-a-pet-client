@@ -1,1 +1,31 @@
-<p>catalog works!</p>
+<div class="container">
+  <div class="filters">
+    <a class="button" (click)="filter = 'dog'">Dogs</a>
+    <a class="button" (click)="filter = 'cat'">Cats</a>
+    <a class="button" (click)="filter = 'exotic'">Exotic</a>
+    <a class="button" (click)="filter = ''">All</a>
+  </div>
+
+  <ul class="products">
+    
+    <li class="product-item" *ngFor="let pet of getPets()">
+      <div class="product">
+        <div class="product-details">
+          <img [src]="getImageUrl(pet)" [alt]="pet.name" />
+          <div class="product-info">
+            <div class="name">{{ pet.name }}</div>
+            <div class="category">{{ pet.breed }}</div>
+
+            <div class="category">{{ pet.type }}</div>
+          </div>
+        </div>
+        <div class="price">
+          <div>{{ pet.pricePerDay }}</div>
+
+          <button class="cta">Buy</button>
+        </div>
+      </div>
+    </li>
+
+  </ul>
+</div>
