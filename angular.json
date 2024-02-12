@@ -55,12 +55,18 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+              "proxyConfig": "src/proxy.conf.json"
+          },
           "configurations": {
             "production": {
-              "buildTarget": "rent-a-pet-client:build:production"
+              "buildTarget": "rent-a-pet-client:build:production",
+              "proxyConfig": "src/proxy.conf.json"
+
             },
             "development": {
-              "buildTarget": "rent-a-pet-client:build:development"
+              "buildTarget": "rent-a-pet-client:build:development",
+              "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
