@@ -1,54 +1,68 @@
 <div class="container">
-    <div class="hero"></div>
+  <div class="hero"></div>
 
+  <div class="promo-main-text">
+    <p>
+      Rent a Pet service offers trained animals for short-term movie rentals.
+    </p>
 
-    <div class="promo-main-text">
-
-<p>
-    Rent a Pet service offers trained animals for short-term movie rentals.</p>
-
-
-    <p>Filmmakers can choose from a variety of pets, including dogs, cats, and exotic animals.</p>
-    <p> Professional handlers accompany the animals on set for a seamless filming experience.</p>
-
-
-    </div>
-
-
-    <div class="promoted">
-      <img src="/assets/images/pangular.jpeg" alt="pangular" />
-      <div class="promo-text">
-        <div class="promo-main-text"><a routerLink="/catalog" >CHECK OUT OUR BEST MOVIE PETS</a></div>
-        <div class="promo-sub-text cta">
-          <div>SAVE 20% ON OUR FRIENDLIEST</div>
-          <div>PETS</div>
-        </div>
-      </div>
-      <img src="/assets/images/schnauzer.jpeg" alt="schnauzer" />
-    </div>
-  
-    <ul class="robot-parts-cta">
-      <li>
-        <a class="part">
-          <img src="/assets/images/golden_retriver.jpeg" alt="golden retriver" />
-          <div> <a routerLink="/catalog" >DOGS</a></div>
-        </a>
-      </li>
-      <li>
-        <a class="part">
-          <img src="/assets/images/american_shorthair_cat.jpeg" alt="american shorthair cat" />
-      
-          <div>    <a routerLink="/catalog" >CATS</a>
-          </div>
-        </a>
-      </li>
-      <li>
-        <a class="part">
-          <img src="/assets/images/penguin.jpeg" alt="penguin" />
-          <div> <a routerLink="/catalog" >EXOTIC</a></div>
-        </a>
-      </li>
-    </ul>
-  
- 
+    <p>
+      Filmmakers can choose from a variety of pets, including dogs, cats, and
+      exotic animals.
+    </p>
+    <p>
+      Professional handlers accompany the animals on set for a seamless filming
+      experience.
+    </p>
   </div>
+
+  <div class="promoted">
+    <img src="/assets/images/pangular.jpeg" alt="pangular" />
+    <div class="promo-text">
+      <div class="promo-main-text">
+        <a routerLink="/catalog">CHECK OUT OUR BEST MOVIE PETS</a>
+      </div>
+      <div class="promo-sub-text cta">
+        <div>SAVE 20% ON OUR FRIENDLIEST</div>
+        <div>PETS</div>
+      </div>
+    </div>
+    <img src="/assets/images/schnauzer.jpeg" alt="schnauzer" />
+  </div>
+
+  <ul class="robot-parts-cta">
+    <li>
+      <a class="part">
+        <img src="/assets/images/golden_retriver.jpeg" alt="golden retriver" />
+
+        <a routerLink="/catalog" [queryParams]="{ filter: 'dog' }"
+        >DOG</a
+      >
+
+
+      </a>
+    </li>
+    <li>
+      <a class="part">
+        <img
+          src="/assets/images/american_shorthair_cat.jpeg"
+          alt="american shorthair cat"
+        />
+
+        <div>
+          <a routerLink="/catalog" [queryParams]="{ filter: 'cat' }">CATS</a>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a class="part">
+        <img src="/assets/images/penguin.jpeg" alt="penguin" />
+        <div>
+          <a routerLink="/catalog" [queryParams]="{ filter: 'exotic' }"
+            >EXOTIC</a
+          >
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>
