@@ -12,7 +12,7 @@ export class CartService {
   private cart: BehaviorSubject<IPet[]> = new BehaviorSubject<IPet[]>([]);
 
   constructor(private http: HttpClient) {
-    this.http.get<IPet[]>('/api/cart').subscribe({
+    this.http.get<IPet[]>('/cart').subscribe({
       next: (cart) => this.cart.next(cart),
     });
   }
@@ -24,7 +24,7 @@ export class CartService {
   add(pet: IPet) {
     const newCart = [...this.cart.getValue(), pet];
     this.cart.next(newCart);
-    this.http.post('/api/cart', newCart).subscribe(() => {
+    this.http.post('/cart', newCart).subscribe(() => {
       console.log('added ' + pet.name + ' to cart!');
     });
   }
@@ -32,7 +32,7 @@ export class CartService {
   remove(pet: IPet) {
     let newCart = this.cart.getValue().filter((i) => i !== pet);
     this.cart.next(newCart);
-    this.http.post('/api/cart', newCart).subscribe(() => {
+    this.http.post('/cart', newCart).subscribe(() => {
       console.log('removed ' + pet.name + ' from cart!');
     });
   }

@@ -4,6 +4,8 @@ import { IPet } from './pet.model';
 import { CommonModule } from '@angular/common';
 
 import { PetService } from './pet.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { CartService } from '../cart/cart.service';
 
 
 
@@ -139,14 +141,21 @@ export class CatalogComponent implements OnInit {
   //   ] };
 
   constructor(
-    //private cartSvc: CartService,
-    private petService: PetService
+    private cartService: CartService,
+    private petService: PetService,
+    private router: Router,
+    private route: ActivatedRoute
   ) { }
 
     ngOnInit() {
       this.petService.getPets().subscribe((pets) => {
         this.pets = pets;
       });
+
+      this.route.queryParams.subscribe((params) => {
+        this.filter = params['filter'] ?? '';
+      })
+
     }
 
 
@@ -163,8 +172,12 @@ export class CatalogComponent implements OnInit {
 
 
     addToCart(pet: IPet) {
-      this.cart.push(pet);
+      //this.cart.push(pet);
       console.log(`pet ${pet.name} added to cart`);
+
+      this.cartService.add(pet)
+
+      this.router.navigate(['/cart']);
     }
 
 }

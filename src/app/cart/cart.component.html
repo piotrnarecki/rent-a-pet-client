@@ -2,7 +2,7 @@
     <h1 class="header">Your Cart</h1>
   
     <div class="empty-cart" *ngIf="cartItems.length === 0">
-      You have no items in your cart
+      You didn't choose any pet. You can search it in catalog page.
     </div>
     <ul class="cart" *ngIf="cartItems.length > 0">
       <li class="cart-item" *ngFor="let pet of cartItems">
@@ -12,7 +12,7 @@
             <div class="product-info">
               <div class="name">{{ pet.name }}</div>
               <div class="description">{{ pet.breed }}</div>
-              <div class="category">Part Type: {{ pet.type }}</div>
+              <div class="category">Pet Type: {{ pet.type }}</div>
             </div>
           </div>
           <div class="price">
