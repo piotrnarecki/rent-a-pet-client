@@ -92,3 +92,22 @@
     text-decoration: line-through;
     font-size: 18px;
   }
+
+
+  .contact-us{
+
+    margin-top: 10px;
+text-align:  center;
+
+  }
+
+  .contact-us button{
+
+background-color: #d25ca1  ;
+
+  }
+
+  .contact-us button :hover{
+
+color: #777;    
+      }
